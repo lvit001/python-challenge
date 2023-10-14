@@ -12,14 +12,23 @@ with open(csvpath) as csvfile:
 
     #assign the first row as the header of the CSV
     csv_header = next(csvreader)
-    #print(csv_header)
+
+    #create lists to contain the data for each column
+    date = []
+    money = []
 
     # for each row of data after the header
     for row in csvreader:
         
-        # assign variables to the columns in the csv
-        date = row[0]
-        money = row[1]
-        
-        #count the number of months
-        month_count = sum(1 for date in csvreader)
+        # add the data to the lists
+        date.append(row[0])
+        money.append(int(row[1]))
+
+        # #count the number of months
+        month_count = len(date)
+
+        # #find the net total of the profits/losses column
+        net_total = sum(money)
+
+print(month_count)
+print(net_total)
