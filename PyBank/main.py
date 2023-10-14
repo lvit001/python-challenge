@@ -12,11 +12,14 @@ with open(csvpath) as csvfile:
 
     #assign the first row as the header of the CSV
     csv_header = next(csvreader)
-    print(csv_header)
+    #print(csv_header)
 
     # for each row of data after the header
     for row in csvreader:
         
-        # assign variables to each of the columns
+        # assign variables to the columns in the csv
         date = row[0]
         money = row[1]
+        
+        #count the number of months
+        month_count = sum(1 for date in csvreader)
