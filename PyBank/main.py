@@ -3,7 +3,7 @@ import os
 import csv
 
 # Set path for file
-csvpath = os.path.join(r"C:\Users\loriv\Desktop\Challenge_3\python-challenge\pybank\Resources\budget_data.csv")
+csvpath = os.path.join("Resources", "budget_data.csv")
 
 # Open the CSV
 with open(csvpath) as csvfile:
@@ -12,7 +12,11 @@ with open(csvpath) as csvfile:
 
     #assign the first row as the header of the CSV
     csv_header = next(csvreader)
-    #print(f"CSV Header: {csv_header}")
+    print(csv_header)
 
+    # for each row of data after the header
     for row in csvreader:
-        print(row)
+        
+        # assign variables to each of the columns
+        date = row[0]
+        money = row[1]
