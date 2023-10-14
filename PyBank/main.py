@@ -29,5 +29,5 @@ with open(csvpath) as csvfile:
     # find the net total of the profits/losses column
     net_total = sum(money)
 
-    print(month_count)
-    print(net_total)
+    print(f"Total Months: {month_count}")
+    print(f"Total: ${net_total}")
