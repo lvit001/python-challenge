@@ -25,7 +25,6 @@ with open(csvpath) as csvfile:
 
     # create a new list to hold changes in the money list
     change = [money[row + 1] - money[row] for row in range(len(money)-1)]
-    print(change)
 
     # count the number of months
     month_count = len(date)
@@ -33,5 +32,11 @@ with open(csvpath) as csvfile:
     # find the net total of the profits/losses column
     net_total = sum(money)
 
+    # find the sum and length of the change list to calculate average change
+    total_change = sum(change)
+    length_change = len(change)
+    average_change = round(total_change/length_change, 2) #use the round function to round the average to 2 decimal points
+
     print(f"Total Months: {month_count}")
     print(f"Total: ${net_total}")
+    print(f"Average Change: ${average_change}")
