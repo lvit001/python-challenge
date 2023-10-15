@@ -51,9 +51,27 @@ with open(csvpath) as csvfile:
     min_index = change.index(min_change) + 1 #need to add 1 to this value since the change list has one less value than the date list
     min_month = date[min_index]
 
-    #print out the analysis
-    print(f"Total Months: {month_count}")
-    print(f"Total: ${net_total}")
-    print(f"Average Change: ${average_change}")
-    print(f"Greatest Increase in Profits: {max_month} (${max_change})")
-    print(f"Greatest Decrease in Profits: {min_month} (${min_change})")
+#print out the analysis in the terminal
+print(f"Total Months: {month_count}")
+print(f"Total: ${net_total}")
+print(f"Average Change: ${average_change}")
+print(f"Greatest Increase in Profits: {max_month} (${max_change})")
+print(f"Greatest Decrease in Profits: {min_month} (${min_change})")
+
+#set variable for output file
+output_file = os.path.join("analysis", "analysis.txt")
+
+#open the output txt file to write in it
+f = open(output_file,'w')
+
+#write the analysis data into the txt file
+f.write('Financial Analysis' + '\n')
+f.write('-------------------------------------' + '\n')
+f.write('Total Months: ' + str(month_count) + '\n')
+f.write('Total: $' + str(net_total) + '\n')
+f.write('Average Change: $' + str(average_change) + '\n')
+f.write('Greatest Increase in Profits: ' + str(max_month) + ' ' + '$' + str(max_change) + '\n')
+f.write('Greatest Increase in Profits: ' + str(min_month) + ' ' + '$' + str(min_change))
+
+#close the txt file
+f.close()
