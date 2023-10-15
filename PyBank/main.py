@@ -71,7 +71,7 @@ f.write('Total Months: ' + str(month_count) + '\n')
 f.write('Total: $' + str(net_total) + '\n')
 f.write('Average Change: $' + str(average_change) + '\n')
 f.write('Greatest Increase in Profits: ' + str(max_month) + ' ' + '(' + '$' + str(max_change) + ')' + '\n')
-f.write('Greatest Increase in Profits: ' + str(min_month) + ' ' + '(' + '$' + str(min_change) +')')
+f.write('Greatest Decrease in Profits: ' + str(min_month) + ' ' + '(' + '$' + str(min_change) +')')
 
 #close the txt file
 f.close()
