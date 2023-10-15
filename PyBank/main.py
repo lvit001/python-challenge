@@ -21,7 +21,11 @@ with open(csvpath) as csvfile:
         
         # add the data to the lists
         date.append(row[0])
-        money.append(int(row[1]))
+        money.append(int(row[1]))   
+
+    # create a new list to hold changes in the money list
+    change = [money[row + 1] - money[row] for row in range(len(money)-1)]
+    print(change)
 
     # count the number of months
     month_count = len(date)
