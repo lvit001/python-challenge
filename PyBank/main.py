@@ -37,6 +37,23 @@ with open(csvpath) as csvfile:
     length_change = len(change)
     average_change = round(total_change/length_change, 2) #use the round function to round the average to 2 decimal points
 
+    #find the max change in the change list
+    max_change = max(change)
+
+    #find the index for the max change and then use that index to find the coresponding month for the change
+    max_index = change.index(max_change) + 1 #need to add 1 to this value since the change list has one less value than the date list
+    max_month = date[max_index]
+
+    #find the min change in the change list
+    min_change = min(change)
+
+    #find the index for the min change and then use that index to find the coresponding month for the change
+    min_index = change.index(min_change) + 1 #need to add 1 to this value since the change list has one less value than the date list
+    min_month = date[min_index]
+
+    #print out the analysis
     print(f"Total Months: {month_count}")
     print(f"Total: ${net_total}")
     print(f"Average Change: ${average_change}")
+    print(f"Greatest Increase in Profits: {max_month} (${max_change})")
+    print(f"Greatest Decrease in Profits: {min_month} (${min_change})")
