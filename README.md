@@ -17,6 +17,9 @@ PyBank Code Explained:
 * for lines 69-76: I created the required financial analysis lines in the analysis.txt file. I learned how to go to the next line using '\n' here: https://stackoverflow.com/questions/2918362/writing-string-to-a-file-on-a-new-line-every-time
 * for lines 78-79: I used f.close() to close the txt file as suggested in the YouTube video referenced in line 15 of this readme file
 
+![image](https://github.com/lvit001/python-challenge/assets/140283164/199dfb00-5f0c-4176-8dbd-020e6581d619)
+
+
 PyPoll:
 * lines 1-13: used code from lecture to import modules and read the election CSV file into python
 * lines 15-17: created empty lists to store voter ID and candidate column data from the CSV into python
