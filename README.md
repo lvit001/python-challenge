@@ -2,7 +2,7 @@
 Module 3 Challenge for Bootcamp
 
 PyBank Code Explained:
-* for lines 1-13, I used code from lectures on how to read a CSV file into python
+* for lines 1-13, I used code from lectures on how to import modules and read a CSV file into python
 * for lines 15-17, I created empty lists that would eventually contain the data from the CSV file
 * for lines 19-24, I created a for loop that would cycle through the rows in the CSV file and add the data to the respective date and money lists
 * for lines 26-27: Code to find the changes in the profits/losses column was found here: https://www.geeksforgeeks.org/python-generate-successive-element-difference-list/# and was changed to work for this data set. I made a change list that would contain the differences between cells in the money list to eventually find the average, max, and mean
@@ -18,4 +18,15 @@ PyBank Code Explained:
 * for lines 78-79: I used f.close() to close the txt file as suggested in the youtube video referenced in line 15 of this readme file
 
 PyPoll:
-*
+* lines 1-13: used code from lecture to import modules and read the election csv file into python
+* lines 15-17: created empty lists to store voter id and candidate column data from the csv into python
+* lines 19-24: created a for loop that would go through the data in the csv reader and added to the respective voter_id and candidate lists in python
+* lines 26-27: used the length function on the voter_id list to get the total number of votes
+* lines 29-32: created empty lists to store data for the three candidates
+* lines 34-44: create a for loop to go through the candidate list and then if/elif statements to pull out data from the list that aligned with each candidates name and then added that data to each respective candidates list
+* lines 47-50: used length functions on all three of the candidate lists to get the total number of votes for each candidate
+* lines 52-59: for each candidate, I created a formula that divided their votes by the total votes and multiplied by 100 to get their percentage of the total votes. I used the round function on each to get a number with 3 decimal points as shown in the example
+* 
+
+![image](https://github.com/lvit001/python-challenge/assets/140283164/c1a6b04f-633b-4beb-9ec0-57656bb2c72d)
+
