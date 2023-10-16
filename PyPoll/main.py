@@ -100,7 +100,7 @@ f.write('Diana DeGette: ' + str(Diana_percent) + '%' + ' ' + '(' + str(Diana_vot
 f.write('Raymon Anthony Doanne: ' + str(Raymon_percent) + '%' + ' ' + '(' + str(Raymon_votes) + ")" + '\n')
 f.write('-------------------------' + '\n')
 f.write('Winner: ' + str(Winner) + '\n')
-f.write('-------------------------' + '\n')
+f.write('-------------------------')
 
 #close the txt file
 f.close()
