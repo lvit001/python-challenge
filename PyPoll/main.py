@@ -27,4 +27,9 @@ with open(csvpath) as csvfile:
 
     #count the total number of votes using the length function on the voter_id list
     total_votes = len(voter_id)
-    print(total_votes)
+
+# printing the required analysis to the terminal
+print("Election Results")
+print("--------------------")
+print(f"Total Votes: {total_votes}")
+print("--------------------")

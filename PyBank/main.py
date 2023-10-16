@@ -52,6 +52,8 @@ with open(csvpath) as csvfile:
     min_month = date[min_index]
 
 #print out the analysis in the terminal
+print("Financial Analysis")
+print("-----------------------------")
 print(f"Total Months: {month_count}")
 print(f"Total: ${net_total}")
 print(f"Average Change: ${average_change}")
