@@ -36,21 +36,19 @@ with open(csvpath) as csvfile:
         
         if row == "Charles Casper Stockham":
             Charles.append(row)
-            #counts the number of votes for Charles
-            Charles_votes = len(Charles)
         
         elif row == "Diana DeGette":
             Diana.append(row)
-            
-            #counts the number of votes for Diana
-            Diana_votes = len(Diana)
         
         elif row == "Raymon Anthony Doane":
             Raymon.append(row)
 
-            #counts the number of votes for Raymon
-            Raymon_votes = len(Raymon)
-    
+
+    #count the number of votes for each candidate using a length function on their lists
+    Charles_votes = len(Charles)
+    Diana_votes = len(Diana)
+    Raymon_votes = len(Raymon)
+
     #calculate the percentage of votes for Charles
     Charles_percent = round(Charles_votes/total_votes * 100, 3)
 
@@ -85,3 +83,24 @@ print(f"Raymon Anthony Doane: {Raymon_percent}% ({Raymon_votes})")
 print("--------------------")
 print(f"Winner: {Winner}")
 print("--------------------")
+
+#set variable for output txt file
+output_file = os.path.join("analysis", "analysis.txt")
+
+#open the output txt file to write in it
+f = open(output_file,'w')
+
+#write the analysis data into the txt file
+f.write('Election Results' + '\n')
+f.write('-------------------------' + '\n')
+f.write('Total Votes: ' + str(total_votes) + '\n')
+f.write('-------------------------' + '\n')
+f.write('Charles Casper Stockham: ' + str(Charles_percent) + '%' + ' ' + '(' + str(Charles_votes) + ")" + '\n')
+f.write('Diana DeGette: ' + str(Diana_percent) + '%' + ' ' + '(' + str(Diana_votes) + ")" + '\n')
+f.write('Raymon Anthony Doanne: ' + str(Raymon_percent) + '%' + ' ' + '(' + str(Raymon_votes) + ")" + '\n')
+f.write('-------------------------' + '\n')
+f.write('Winner: ' + str(Winner) + '\n')
+f.write('-------------------------' + '\n')
+
+#close the txt file
+f.close()
