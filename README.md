@@ -28,12 +28,12 @@ PyPoll:
 * lines 29-32: created empty lists to store data for the three candidates
 * lines 34-44: create a for loop to go through the candidate list and then if/elif statements to pull out data from the list that aligned with each candidate's name and then add that data to each respective candidate's list
 * lines 47-50: used length functions on all three of the candidate lists to get the total number of votes for each candidate
-* lines 52-59: for each candidate, I created a formula that divided their votes by the total votes and multiplied by 100 to get their percentage of the total votes. I used the round function on each to get a number with 3 decimal points as shown in the example
-* lines 61-73: created if, elif, and else statements to compare the number of votes each candidate had to each other. For example, if Charles had more votes than Diana and Raymon, the winner variable would be assigned to Charles's name. If Diana had more votes than the other two candidates, the winner variable would be assigned to Diana's name. Finally, if neither Charles nor Diana could meet those requirements, the winner variable would be assigned to Raymon's name.
-* lines 75-85: printed the required analysis information to the terminal
-* lines 87-91: set the output file location to be in the analysis folder as analysis.txt and then opened the analysis.txt file
-* lines 93-103: wrote the required analysis information in the analysis.txt file
-* lines 105-106: closed the txt file
+* lines 52-59: created a function that finds the percentage of votes and rounds to the third decimal point. Then, put each candidates total votes into the function
+* lines 61-71: created if, elif, and else statements to compare the number of votes each candidate had to each other. For example, if Charles had more votes than Diana and Raymon, the winner variable would be assigned to Charles's name. If Diana had more votes than the other two candidates, the winner variable would be assigned to Diana's name. Finally, if neither Charles nor Diana could meet those requirements, the winner variable would be assigned to Raymon's name.
+* lines 73-83: printed the required analysis information to the terminal
+* lines 85-89: set the output file location to be in the analysis folder as analysis.txt and then opened the analysis.txt file
+* lines 91-101: wrote the required analysis information in the analysis.txt file
+* lines 103-104: closed the txt file
 
 ![image](https://github.com/lvit001/python-challenge/assets/140283164/c1a6b04f-633b-4beb-9ec0-57656bb2c72d)
 
