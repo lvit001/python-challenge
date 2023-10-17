@@ -49,16 +49,14 @@ with open(csvpath) as csvfile:
     Diana_votes = len(Diana)
     Raymon_votes = len(Raymon)
 
-    #calculate the percentage of votes for Charles
-    Charles_percent = round(Charles_votes/total_votes * 100, 3)
-
-    #calculate the percentage of votes for Diana
-    Diana_percent = round(Diana_votes/total_votes * 100, 3)
-
-    #calculate the percentage of votes for Raymon
-    Raymon_percent = round(Raymon_votes/total_votes * 100, 3)
-
-    #create if, elif, and else statements to determine the winner
+    #create a function to calculate the percentage of total votes
+    def percentage(votes):
+        return round(votes/total_votes * 100, 3)
+    
+    #use the percentage function to find the percentage of votes for each candidate
+    Charles_percent = percentage(Charles_votes)
+    Diana_percent = percentage(Diana_votes)
+    Raymon_percent = percentage(Raymon_votes)
 
     #if Charles has more votes than Diana and Raymon, Charles is the winner
     if Charles_votes > Diana_votes and Charles_votes > Raymon_votes:
